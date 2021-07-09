@@ -16,27 +16,5 @@ class DzdApplicationTests {
     @Autowired
     protected Map<String, OnlinePayServiceDefult> channels;
 
-    @Test
-    void contextLoads() {
-        for (int i = 0; i <100 ; i++) {
-            tt tt= new tt(i+"");
-            tt.run();
-        }
 
-    }
-
-
-    private class tt implements Runnable {
-        private String i;
-
-        public tt(String i){
-            this.i=i;
-        }
-
-        @Override
-        public void run() {
-            PayVoUtils.set(new PayVo(i+"","wx",new BigDecimal(1)));
-            channels.get("wx").getOrderPayTime();
-        }
-    }
 }
