@@ -19,12 +19,6 @@ public  abstract class OnlinePayServiceDefult implements PayService {
         return "20210709"+ PayVoUtils.get().getChannelNo();
     }
 
-    public Map<String,Object> pay(){
-        Map<String,Object> map = new HashMap<>();
-        map.put("code","1001");
-        map.put("msg","支付失败，未找到对应渠道");
-        return map;
-    }
 
     @Override
     public Context getInitialContext(Hashtable<?, ?> environment) throws NamingException {
